@@ -2,6 +2,8 @@
 
 In this task I've implemented the logic for the calculator based on the simple HTML and Jquery as a part of the requirement. 
 
+https://my-sandbox.w3spaces.com/calc.html
+
 Activity
 
 In calc.js, write the JavaScript code using jQuery to implement the calculator functionality. Your calculator should work as a “normal” calculator would be expected to operate, but here are the different use cases that your app needs to consider:
