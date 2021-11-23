@@ -18,15 +18,18 @@ let calculate = function (arr) {
       return x * y;
     },
     divideButton: function (x, y) {
+      if (x == 0) {
+        return (x / y);
+      }
       return (x / y).toFixed(1);
-    }
+    },
   };
 
   return mathOp[arr[1]](Number(arr[0]), Number(arr[2]));
 };
 
 $(".number").click(function () {
-  if (arr.length == 1 || arr.length == 3) { //a new operation 
+  if (arr.length == 3) { //a new operation 
     display = "";
     arr = [];
   }
@@ -77,7 +80,7 @@ $("#equalsButton").click(function () { //shows the result if the arr is complete
     $("#display").val(result);
   }
   if (arr.length == 2) { //if incomplete, check if there is a num in memo. Push it and calculate.
-    if (Number(current)) {
+    if (current != undefined) {
       arr.push(current);
       current = undefined;
       display = "";
